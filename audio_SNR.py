@@ -14,14 +14,14 @@ from math import gcd
 # 1. 路径与增强配置
 # =========================
 
-CLEAN_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\train_clean_100")
-OUT_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\train_clean_100_augmented")
+CLEAN_DIR = Path(r"your_Dataset_PATH")
+OUT_DIR = Path(r"your_Dataset_PATH")
 
 # 可以同时启用或只启用一种背景/前景噪音
 # 留空列表或设置为 None 则不使用该类增强
 
-BG_NOISE_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\noise\station-qut")  # 长时平稳背景噪
-FG_NOISE_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\noise\free-sound")   # 瞬态阵发前景噪
+BG_NOISE_DIR = Path(r"your_Dataset_PATH")  # 长时平稳背景噪
+FG_NOISE_DIR = Path(r"your_Dataset_PATH")   # 瞬态阵发前景噪
 
 BG_SNR_LIST = [5, 10, 15]  # 背景噪声 SNR
 FG_SNR_LIST = [0, 5, 10]   # 前景噪声 SNR
