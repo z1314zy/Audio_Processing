@@ -5,7 +5,7 @@ import scipy.io.wavfile as wavfile
 from scipy.signal import resample_poly
 from math import gcd
 
-DATA_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\QUT_Dataset")
+DATA_DIR = Path(r"your_Dataset_PATH")
 TARGET_SR = 16000
 
 def audio_to_float32(data):
@@ -30,14 +30,14 @@ def process_audio_file(file_path,
                        in_dir=None,
                        out_dir=None):
     """
-    音频处理的二次封装函数，功能可自由组合:
-    :param file_path: 音频文件路径 (Path对象或字符串)
-    :param target_sr: 目标采样率 (如 16000)。如果为 None，则保持原采样率不转换。
-    :param to_mono: 是否强制转换为单声道 (True/False)。
-    :param segment_seconds: 切割时长(秒)。如果为 None，则不进行切割，直接保持原长。
-    :param delete_original: 切割完成后是否删除原有的长音频文件。
-    :param in_dir: 原始音频的主目录（用于计算相对路径结构）。
-    :param out_dir: 输出的主目录。如果这里传入了有效目录，导出的文件将保持子目录结构输出到此目录下；若为 None，直接原地读写。
+    Secondary encapsulation functions for audio processing with freely combinable features:
+    :param file_path: Path to the audio file (Path object or string)
+    :param target_sr: Target sampling rate (e.g., 16000). If None, the original sampling rate is retained without conversion.
+    :param to_mono: Whether to force conversion to mono channel (True/False).
+    :param segment_seconds: Segmentation duration in seconds. If None, no segmentation is performed and the original length is retained.
+    :param delete_original: Whether to delete the original long audio file after segmentation.
+    :param in_dir: Root directory of raw audio (used to calculate relative directory structure).
+    :param out_dir: Root output directory. If a valid directory is passed, output files will be exported to this directory while preserving the subdirectory structure; if None, read and write operations will be performed locally.
     """
     file_path = Path(file_path)
     try:
@@ -113,11 +113,10 @@ def main():
     CFG_TO_MONO = False       # 设为 True 转单声道，设为 False 不改变声道数
     CFG_SEGMENT_SEC = 15      # 每段切片秒数，设为 None 则不切割
     CFG_DELETE_ORIGINAL = False # 处理完是否删除原音频
-    
-    # 【新增功能】输出目录配置：
+
     # 如果希望保持原目录结构，但导出到一个新地方，请填写 CFG_OUT_DIR (例如 Path(r"D:\VAD\1.vad_learn\data_processing\QUT_Dataset_15s"))
     # 如果仍希望原地生成（像之前那样），请设置为 None
-    CFG_OUT_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\QUT_Dataset_15s")
+    CFG_OUT_DIR = Path(r"your_Dataset_PATH")
     # --------------------------------------------
     
     action_str = []
