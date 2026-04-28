@@ -15,9 +15,9 @@ from math import gcd
 # 1. 路径配置
 # =========================
 
-CLEAN_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\train_clean_100")
-NOISE_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\noise\station-qut")
-OUT_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\train_clean_100_station-qut")
+CLEAN_DIR = Path(r"your_Dataset_PATH")
+NOISE_DIR = Path(r"your_Dataset_PATH")
+OUT_DIR = Path(r"your_Dataset_PATH")
 
 SNR_LIST = [-10, -5, 0, 5, 10]
 
