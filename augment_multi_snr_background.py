@@ -14,13 +14,13 @@ from math import gcd
 # 1. 路径与增强配置
 # =========================
 
-CLEAN_DIR = Path(r"D:\VAD\1.vad_learn\ten-vad\testset")
-OUT_DIR = Path(r"D:\VAD\1.vad_learn\ten-vad\SNR_NOISE_PR_PYTHON\testset_REVERB")
+CLEAN_DIR = Path(r"your_Dataset_PATH")
+OUT_DIR = Path(r"your_Dataset_PATH")
 
 # 可以同时启用或只启用一种背景/前景噪音
 # 留空列表或设置为 None 则不使用该类增强
 
-BG_NOISE_DIR = Path(r"D:\VAD\1.vad_learn\data_processing\QUT_Dataset_15s\REVERB")  # 背景噪声目录
+BG_NOISE_DIR = Path(r"your_Dataset_PATH")  # 背景噪声目录
 
 BG_SNR_LIST = [5, 8, 10, 15]  # 规定输出的 SNR 列表，每个值都会生成一个对应子文件夹
 
