@@ -1,3 +1,4 @@
+![demo图片](images/demo.png)
 # 语音数据集数据处理与数据增强工具库 (Data Processing & Augmentation)
 
 本仓库包含了用于 VAD (Voice Activity Detection)、ASR (Automatic Speech Recognition) 音频数据预处理、格式转换、降采样、以及深度数据增强（混音、加噪）的纯 Python 工具箱。所有工具已完全解耦 Linux/Kaldi 环境依赖，可在 Windows 系统下开箱即用。
