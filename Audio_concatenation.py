@@ -14,8 +14,8 @@ from scipy.signal import resample_poly
 # 配置区域
 # =========================================================
 
-INPUT_DIR = Path("/jldata/datasets/speech/ns/noise")
-OUTPUT_DIR = Path("/jldata/datasets/speech/ns/noise_concat")
+INPUT_DIR = Path("your_path")
+OUTPUT_DIR = Path("your_path")
 
 TARGET_SECONDS = 10.0
 MIN_REMAIN_SECONDS = 0.1
