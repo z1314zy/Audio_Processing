@@ -1,3 +1,16 @@
+'''
+python gen_general_audio_mixture.py \
+  --data_root /data/clean_speech \
+  --noise_dir /data/vad_30s_noise \
+  --rir_dir /data/impulse_responses \
+  --save_root /data/clean_speech_noisy \
+  --fs 16000 \
+  --snr_min -10 \
+  --snr_max 15 \
+  --total_hours 0 \
+  --num_processes 16
+'''
+
 import os
 import random
 import numpy as np
